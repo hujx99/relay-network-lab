@@ -19,6 +19,10 @@ have() {
   command -v "$1" >/dev/null 2>&1
 }
 
+is_ipv4_literal() {
+  [[ "$1" =~ ^([0-9]{1,3}\.){3}[0-9]{1,3}$ ]]
+}
+
 first_line() {
   sed -n '1p'
 }
@@ -148,8 +152,13 @@ hostport="$(strip_url_to_hostport "$input")"
 host="$(host_from_hostport "$hostport")"
 port="$(port_from_input "$input" "$hostport")"
 
-target_a="$(resolve_a "$host" || true)"
-target_aaaa="$(resolve_aaaa "$host" || true)"
+if is_ipv4_literal "$host"; then
+  target_a="$host"
+  target_aaaa=""
+else
+  target_a="$(resolve_a "$host" || true)"
+  target_aaaa="$(resolve_aaaa "$host" || true)"
+fi
 route_target="$target_a"
 if [[ -z "$route_target" ]]; then
   route_target="$target_aaaa"
