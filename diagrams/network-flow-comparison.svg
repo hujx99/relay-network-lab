@@ -1,0 +1,139 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="1080" viewBox="0 0 1440 1080" role="img" aria-labelledby="title desc">
+  <title id="title">Network flow visualization results</title>
+  <desc id="desc">Rendered network flow diagrams for Google, bdidu.com, and Tailscale DNS from the test host.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#334155"/>
+    </marker>
+    <style>
+      .page { fill: #f8fafc; }
+      .title { font: 700 30px Arial, sans-serif; fill: #0f172a; }
+      .subtitle { font: 400 15px Arial, sans-serif; fill: #475569; }
+      .panel { fill: #ffffff; stroke: #cbd5e1; stroke-width: 1.5; rx: 8; }
+      .panel-title { font: 700 20px Arial, sans-serif; fill: #0f172a; }
+      .panel-subtitle { font: 400 13px Arial, sans-serif; fill: #64748b; }
+      .node { fill: #f8fafc; stroke: #94a3b8; stroke-width: 1.4; rx: 8; }
+      .node-main { fill: #ecfeff; stroke: #0891b2; stroke-width: 1.8; rx: 8; }
+      .node-tail { fill: #f0fdf4; stroke: #16a34a; stroke-width: 1.8; rx: 8; }
+      .node-egress { fill: #fff7ed; stroke: #f97316; stroke-width: 1.8; rx: 8; }
+      .label { font: 700 13px Arial, sans-serif; fill: #0f172a; }
+      .value { font: 400 12px Arial, sans-serif; fill: #334155; }
+      .muted { font: 400 11px Arial, sans-serif; fill: #64748b; }
+      .edge { stroke: #334155; stroke-width: 1.6; fill: none; marker-end: url(#arrow); }
+      .note { fill: #fff7ed; stroke: #fed7aa; stroke-width: 1; rx: 8; }
+      .note-text { font: 400 13px Arial, sans-serif; fill: #7c2d12; }
+    </style>
+  </defs>
+
+  <rect class="page" x="0" y="0" width="1440" height="1080"/>
+  <text class="title" x="48" y="54">Network Flow Visualization Results</text>
+  <text class="subtitle" x="48" y="82">Generated from local observations on 2026-06-19. Sensitive IP addresses are redacted.</text>
+
+  <rect class="panel" x="40" y="115" width="1360" height="270"/>
+  <text class="panel-title" x="68" y="150">Google HTTPS</text>
+  <text class="panel-subtitle" x="68" y="172">https://www.google.com returned HTTP 200</text>
+  <rect class="node-main" x="70" y="215" width="155" height="82"/>
+  <text class="label" x="92" y="240">App / Client</text>
+  <text class="value" x="92" y="262">https://www.google.com</text>
+  <text class="muted" x="92" y="282">port 443</text>
+  <rect class="node" x="270" y="190" width="185" height="82"/>
+  <text class="label" x="292" y="215">DNS Resolver</text>
+  <text class="value" x="292" y="237">Tailscale DNS</text>
+  <text class="muted" x="292" y="257">resolver redacted</text>
+  <rect class="node" x="500" y="190" width="180" height="82"/>
+  <text class="label" x="522" y="215">Resolved Target</text>
+  <text class="value" x="522" y="237">142.251.153.119</text>
+  <text class="muted" x="522" y="257">AAAA available</text>
+  <rect class="node" x="500" y="300" width="180" height="62"/>
+  <text class="label" x="522" y="324">Kernel Route</text>
+  <text class="value" x="522" y="346">dev eth0, src REDACTED</text>
+  <rect class="node" x="735" y="300" width="180" height="62"/>
+  <text class="label" x="757" y="324">Next Hop</text>
+  <text class="value" x="757" y="346">REDACTED</text>
+  <rect class="node-egress" x="970" y="300" width="180" height="62"/>
+  <text class="label" x="992" y="324">Observed Egress</text>
+  <text class="value" x="992" y="346">IPv4 REDACTED</text>
+  <rect class="node-main" x="1205" y="215" width="155" height="82"/>
+  <text class="label" x="1227" y="240">Target Service</text>
+  <text class="value" x="1227" y="262">www.google.com</text>
+  <text class="muted" x="1227" y="282">HTTPS 200</text>
+  <path class="edge" d="M225 242 L270 232"/>
+  <path class="edge" d="M455 232 L500 232"/>
+  <path class="edge" d="M225 270 C330 333 390 333 500 333"/>
+  <path class="edge" d="M680 333 L735 333"/>
+  <path class="edge" d="M915 333 L970 333"/>
+  <path class="edge" d="M1150 333 C1190 333 1190 256 1205 256"/>
+
+  <rect class="panel" x="40" y="420" width="1360" height="270"/>
+  <text class="panel-title" x="68" y="455">bdidu.com HTTPS</text>
+  <text class="panel-subtitle" x="68" y="477">https://bdidu.com returned HTTP 200. Tested exactly as typed.</text>
+  <rect class="node-main" x="70" y="520" width="155" height="82"/>
+  <text class="label" x="92" y="545">App / Client</text>
+  <text class="value" x="92" y="567">https://bdidu.com</text>
+  <text class="muted" x="92" y="587">port 443</text>
+  <rect class="node" x="270" y="495" width="185" height="82"/>
+  <text class="label" x="292" y="520">DNS Resolver</text>
+  <text class="value" x="292" y="542">Tailscale DNS</text>
+  <text class="muted" x="292" y="562">resolver redacted</text>
+  <rect class="node" x="500" y="495" width="180" height="82"/>
+  <text class="label" x="522" y="520">Resolved Target</text>
+  <text class="value" x="522" y="542">13.248.169.48</text>
+  <text class="muted" x="522" y="562">no AAAA found</text>
+  <rect class="node" x="500" y="605" width="180" height="62"/>
+  <text class="label" x="522" y="629">Kernel Route</text>
+  <text class="value" x="522" y="651">dev eth0, src REDACTED</text>
+  <rect class="node" x="735" y="605" width="180" height="62"/>
+  <text class="label" x="757" y="629">Next Hop</text>
+  <text class="value" x="757" y="651">REDACTED</text>
+  <rect class="node-egress" x="970" y="605" width="180" height="62"/>
+  <text class="label" x="992" y="629">Observed Egress</text>
+  <text class="value" x="992" y="651">IPv4 REDACTED</text>
+  <rect class="node-main" x="1205" y="520" width="155" height="82"/>
+  <text class="label" x="1227" y="545">Target Service</text>
+  <text class="value" x="1227" y="567">bdidu.com</text>
+  <text class="muted" x="1227" y="587">HTTPS 200</text>
+  <path class="edge" d="M225 547 L270 537"/>
+  <path class="edge" d="M455 537 L500 537"/>
+  <path class="edge" d="M225 575 C330 638 390 638 500 638"/>
+  <path class="edge" d="M680 638 L735 638"/>
+  <path class="edge" d="M915 638 L970 638"/>
+  <path class="edge" d="M1150 638 C1190 638 1190 561 1205 561"/>
+
+  <rect class="panel" x="40" y="725" width="1360" height="270"/>
+  <text class="panel-title" x="68" y="760">Tailscale DNS / Inner Network Path</text>
+  <text class="panel-subtitle" x="68" y="782">Tailscale DNS is reached through tailscale0; DNS query responded.</text>
+  <rect class="node-tail" x="70" y="825" width="155" height="82"/>
+  <text class="label" x="92" y="850">App / Client</text>
+  <text class="value" x="92" y="872">Tailscale DNS</text>
+  <text class="muted" x="92" y="892">Tailscale DNS</text>
+  <rect class="node-tail" x="270" y="800" width="185" height="82"/>
+  <text class="label" x="292" y="825">DNS Resolver</text>
+  <text class="value" x="292" y="847">Tailscale DNS</text>
+  <text class="muted" x="292" y="867">resolver redacted</text>
+  <rect class="node-tail" x="500" y="800" width="180" height="82"/>
+  <text class="label" x="522" y="825">Target Address</text>
+  <text class="value" x="522" y="847">REDACTED</text>
+  <text class="muted" x="522" y="867">literal IPv4</text>
+  <rect class="node-tail" x="500" y="910" width="180" height="62"/>
+  <text class="label" x="522" y="934">Kernel Route</text>
+  <text class="value" x="522" y="956">dev tailscale0, src REDACTED</text>
+  <rect class="node-tail" x="735" y="910" width="180" height="62"/>
+  <text class="label" x="757" y="934">Next Hop</text>
+  <text class="value" x="757" y="956">direct or unknown</text>
+  <rect class="node-egress" x="970" y="910" width="180" height="62"/>
+  <text class="label" x="992" y="934">Observed Public IP</text>
+  <text class="value" x="992" y="956">IPv4 REDACTED</text>
+  <rect class="node-tail" x="1205" y="825" width="155" height="82"/>
+  <text class="label" x="1227" y="850">Target Service</text>
+  <text class="value" x="1227" y="872">Tailscale DNS</text>
+  <text class="muted" x="1227" y="892">DNS responded</text>
+  <path class="edge" d="M225 852 L270 842"/>
+  <path class="edge" d="M455 842 L500 842"/>
+  <path class="edge" d="M225 880 C330 943 390 943 500 943"/>
+  <path class="edge" d="M680 943 L735 943"/>
+  <path class="edge" d="M915 943 L970 943"/>
+  <path class="edge" d="M1150 943 C1190 943 1190 866 1205 866"/>
+
+  <rect class="note" x="40" y="1018" width="1360" height="42"/>
+  <text class="note-text" x="62" y="1044">Note: tracepath/traceroute was not installed during this run, so these diagrams show DNS, route lookup, egress IP, and connectivity results rather than hop-by-hop internet path.</text>
+</svg>
