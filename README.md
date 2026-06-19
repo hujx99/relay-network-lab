@@ -76,13 +76,34 @@ relay-network-lab/
 - [x] README 第一版
 - [x] 第 1 章：网络基础
 - [x] 实验 1：检查出口 IP、DNS 与路由
-- [ ] 第 2 章：Linux 网络工具
-- [ ] 第 3 章：SSH Tunnel 与 SOCKS5
-- [ ] 第 4 章：WireGuard 基础
-- [ ] 第 5 章：Tailscale 实验
-- [ ] 第 6 章：DNS 与泄露检查
-- [ ] 第 7 章：防火墙与 kill switch
-- [ ] 第 8 章：Threat model
+- [x] 第 2 章：Linux 网络工具
+- [x] 第 3 章：SSH Tunnel 与 SOCKS5
+- [x] 第 4 章：WireGuard 基础
+- [x] 第 5 章：Tailscale 实验
+- [x] 第 6 章：DNS 与泄露检查
+- [x] 第 7 章：防火墙与 kill switch
+- [x] 第 8 章：Threat model
+- [x] 实验 2：SSH SOCKS5 本地隧道
+- [x] 实验 3：WireGuard 双节点互联
+- [x] 实验 4：Tailscale Exit Node
+
+## 章节索引
+
+- [第 1 章：网络基础](docs/01-network-basics.md)
+- [第 2 章：Linux 网络工具](docs/02-linux-networking.md)
+- [第 3 章：SSH Tunnel 与 SOCKS5](docs/03-ssh-tunnel.md)
+- [第 4 章：WireGuard 基础](docs/04-wireguard-basics.md)
+- [第 5 章：Tailscale 实验](docs/05-tailscale-lab.md)
+- [第 6 章：DNS 与泄露检查](docs/06-dns-and-leaks.md)
+- [第 7 章：防火墙与 kill switch](docs/07-firewall-killswitch.md)
+- [第 8 章：Threat model](docs/08-threat-model.md)
+
+## 实验索引
+
+- [实验 1：检查出口 IP、DNS 与路由](labs/lab-01-check-ip-route.md)
+- [实验 2：SSH SOCKS5 本地隧道](labs/lab-02-ssh-socks5.md)
+- [实验 3：WireGuard 双节点互联](labs/lab-03-wireguard-peer.md)
+- [实验 4：Tailscale Exit Node](labs/lab-04-tailscale-exit-node.md)
 
 ## 学习路线
 
@@ -122,4 +143,3 @@ DNS 服务器：
 ## License
 
 MIT License. See `LICENSE`.
-
