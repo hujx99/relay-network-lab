@@ -53,7 +53,7 @@ Debian 或 Ubuntu：
 
 ```bash
 sudo apt update
-sudo apt install -y curl dnsutils iproute2 iputils-ping traceroute
+sudo apt install -y curl dnsutils iproute2 iputils-ping iputils-tracepath traceroute
 ```
 
 RHEL、CentOS、Rocky Linux 或 AlmaLinux：
@@ -274,4 +274,3 @@ tracepath 1.1.1.1 摘要：
 - Listening port
 - Local address
 - Remote address
-

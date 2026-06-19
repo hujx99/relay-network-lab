@@ -63,7 +63,7 @@ Debian 或 Ubuntu：
 
 ```bash
 sudo apt update
-sudo apt install -y curl dnsutils iproute2 iputils-ping traceroute
+sudo apt install -y curl dnsutils iproute2 iputils-ping iputils-tracepath traceroute
 ```
 
 RHEL 系发行版：
@@ -183,4 +183,3 @@ sudo iptables -t nat -S
 - Firewall ruleset
 - NAT table
 - Conntrack
-

@@ -60,12 +60,14 @@ relay-network-lab/
 │   ├── 05-tailscale-lab.md
 │   ├── 06-dns-and-leaks.md
 │   ├── 07-firewall-killswitch.md
-│   └── 08-threat-model.md
+│   ├── 08-threat-model.md
+│   └── 09-visualize-network-flow.md
 ├── labs/
 │   ├── lab-01-check-ip-route.md
 │   ├── lab-02-ssh-socks5.md
 │   ├── lab-03-wireguard-peer.md
-│   └── lab-04-tailscale-exit-node.md
+│   ├── lab-04-tailscale-exit-node.md
+│   └── lab-05-visualize-flow.md
 ├── diagrams/
 ├── scripts/
 └── LICENSE
@@ -83,9 +85,11 @@ relay-network-lab/
 - [x] 第 6 章：DNS 与泄露检查
 - [x] 第 7 章：防火墙与 kill switch
 - [x] 第 8 章：Threat model
+- [x] 第 9 章：可视化网络流
 - [x] 实验 2：SSH SOCKS5 本地隧道
 - [x] 实验 3：WireGuard 双节点互联
 - [x] 实验 4：Tailscale Exit Node
+- [x] 实验 5：可视化访问某个网址或服务的网络流
 
 ## 章节索引
 
@@ -97,6 +101,7 @@ relay-network-lab/
 - [第 6 章：DNS 与泄露检查](docs/06-dns-and-leaks.md)
 - [第 7 章：防火墙与 kill switch](docs/07-firewall-killswitch.md)
 - [第 8 章：Threat model](docs/08-threat-model.md)
+- [第 9 章：可视化网络流](docs/09-visualize-network-flow.md)
 
 ## 实验索引
 
@@ -104,6 +109,7 @@ relay-network-lab/
 - [实验 2：SSH SOCKS5 本地隧道](labs/lab-02-ssh-socks5.md)
 - [实验 3：WireGuard 双节点互联](labs/lab-03-wireguard-peer.md)
 - [实验 4：Tailscale Exit Node](labs/lab-04-tailscale-exit-node.md)
+- [实验 5：可视化访问某个网址或服务的网络流](labs/lab-05-visualize-flow.md)
 
 ## 学习路线
 
